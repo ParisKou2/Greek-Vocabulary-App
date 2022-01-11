@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jVT-FZ-dpC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="oXq-tL-U6k">
+            <objects>
+                <tableViewController id="McP-Jh-aD2" customClass="HomeScreenTableVC" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YHg-Uf-OcL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="What would you like to do today?" id="T7C-aa-92n">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add New Word" rowHeight="91" id="YDR-sL-uyL">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YDR-sL-uyL" id="4GM-5o-Jqa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O35-nT-xsL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Add New Word">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="5hC-YU-HKH" kind="show" id="6x6-Ut-ffV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="O35-nT-xsL" secondAttribute="bottom" id="1cn-hU-JeZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="O35-nT-xsL" secondAttribute="trailing" id="4RN-6E-X1W"/>
+                                                <constraint firstItem="O35-nT-xsL" firstAttribute="top" secondItem="4GM-5o-Jqa" secondAttribute="top" id="S9C-26-VK2"/>
+                                                <constraint firstItem="O35-nT-xsL" firstAttribute="leading" secondItem="4GM-5o-Jqa" secondAttribute="leading" id="qFa-hT-qpl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Show Vocabulary List" rowHeight="91" id="VU7-zy-Dk0">
+                                        <rect key="frame" x="0.0" y="146.5" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VU7-zy-Dk0" id="NtA-uk-QQc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-sK-41Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Show Vocabulary List">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="MLN-Ai-5Sj" kind="show" id="WXp-1V-YEy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="QUh-sK-41Q" secondAttribute="trailing" id="0ZV-vO-Tnh"/>
+                                                <constraint firstItem="QUh-sK-41Q" firstAttribute="top" secondItem="NtA-uk-QQc" secondAttribute="top" id="4JZ-gq-yAr"/>
+                                                <constraint firstItem="QUh-sK-41Q" firstAttribute="leading" secondItem="NtA-uk-QQc" secondAttribute="leading" id="TUa-gl-y9m"/>
+                                                <constraint firstAttribute="bottom" secondItem="QUh-sK-41Q" secondAttribute="bottom" id="tlr-5r-B68"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Test Your Knowledge" rowHeight="91" id="XO6-Yi-RY6">
+                                        <rect key="frame" x="0.0" y="237.5" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XO6-Yi-RY6" id="oa3-QK-qov">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwH-Ck-Smd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Test Your Knowledge">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="c4u-da-2dC" kind="show" id="4oo-fW-7op"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="NwH-Ck-Smd" secondAttribute="bottom" id="6lf-Bt-JbS"/>
+                                                <constraint firstAttribute="trailing" secondItem="NwH-Ck-Smd" secondAttribute="trailing" id="eIr-TI-OqG"/>
+                                                <constraint firstItem="NwH-Ck-Smd" firstAttribute="top" secondItem="oa3-QK-qov" secondAttribute="top" id="rg0-kl-zqQ"/>
+                                                <constraint firstItem="NwH-Ck-Smd" firstAttribute="leading" secondItem="oa3-QK-qov" secondAttribute="leading" id="sOY-8J-kBc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="McP-Jh-aD2" id="BVM-8f-R5A"/>
+                            <outlet property="delegate" destination="McP-Jh-aD2" id="ld0-Ka-lXn"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home" id="6us-pt-oPa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLD-G4-Uyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="36.830357142857139"/>
+        </scene>
+        <!--Test Your Knowledge-->
+        <scene sceneID="U27-NX-dZX">
+            <objects>
+                <tableViewController id="c4u-da-2dC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Y7-AH-gAR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Which Test Would You Like To Take?" id="mR4-R9-eKm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Identifying Test" rowHeight="90" id="7U6-7B-Wmj">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7U6-7B-Wmj" id="crh-cR-6IU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgV-DW-a0b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Identifying Test">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="bVg-tJ-HeO" kind="show" id="BaH-FG-LBf"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pgV-DW-a0b" secondAttribute="trailing" id="MjP-xn-LI1"/>
+                                                <constraint firstAttribute="bottom" secondItem="pgV-DW-a0b" secondAttribute="bottom" id="Y05-ZB-5bD"/>
+                                                <constraint firstItem="pgV-DW-a0b" firstAttribute="top" secondItem="crh-cR-6IU" secondAttribute="top" id="lVU-DZ-7DN"/>
+                                                <constraint firstItem="pgV-DW-a0b" firstAttribute="leading" secondItem="crh-cR-6IU" secondAttribute="leading" id="rUu-o0-jgr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Solve The Anagram" rowHeight="90" id="MTz-y2-j5R">
+                                        <rect key="frame" x="0.0" y="145.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MTz-y2-j5R" id="cN4-TD-LIJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-13-R4b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Solve The Anagram">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="ga3-fL-xwO" kind="show" id="XbD-GA-UYm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mhO-13-R4b" secondAttribute="bottom" id="cP6-Nk-sdM"/>
+                                                <constraint firstItem="mhO-13-R4b" firstAttribute="leading" secondItem="cN4-TD-LIJ" secondAttribute="leading" id="lju-W3-eJl"/>
+                                                <constraint firstItem="mhO-13-R4b" firstAttribute="top" secondItem="cN4-TD-LIJ" secondAttribute="top" id="p7x-F8-ya9"/>
+                                                <constraint firstAttribute="trailing" secondItem="mhO-13-R4b" secondAttribute="trailing" id="yCT-bA-v7v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Spell The Answer" rowHeight="90" id="JTv-0U-J05">
+                                        <rect key="frame" x="0.0" y="235.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTv-0U-J05" id="S5S-cQ-nKF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-Ya-RoI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Spell The Answer">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="jUT-ZF-lgR" kind="show" id="jKl-4Z-x9s"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Zf8-Ya-RoI" secondAttribute="trailing" id="VDd-CS-DMy"/>
+                                                <constraint firstItem="Zf8-Ya-RoI" firstAttribute="leading" secondItem="S5S-cQ-nKF" secondAttribute="leading" id="g7A-zZ-IYw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zf8-Ya-RoI" secondAttribute="bottom" id="hj4-lq-aob"/>
+                                                <constraint firstItem="Zf8-Ya-RoI" firstAttribute="top" secondItem="S5S-cQ-nKF" secondAttribute="top" id="uR2-q8-EdH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="c4u-da-2dC" id="4PX-R0-qJO"/>
+                            <outlet property="delegate" destination="c4u-da-2dC" id="nxY-7q-lO7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Test Your Knowledge" id="BCl-Ir-acn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCY-aC-lE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="589"/>
+        </scene>
+        <!--Spell The Answer-->
+        <scene sceneID="bOa-kr-yd5">
+            <objects>
+                <viewController id="jUT-ZF-lgR" customClass="SpellingTestVC" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9y-M8-YC7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kqp-QI-Frn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryd-II-Po6">
+                                        <rect key="frame" x="172.5" y="0.0" width="69" height="116.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Greek" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-Uu-DZb">
+                                        <rect key="frame" x="169" y="116.5" width="76" height="117"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-xo-kPh">
+                                        <rect key="frame" x="166.5" y="233.5" width="81" height="116.5"/>
+                                        <state key="normal" title="Instructions"/>
+                                        <connections>
+                                            <action selector="instructions:" destination="jUT-ZF-lgR" eventType="touchUpInside" id="ScL-bN-PC7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="qaz-w4-Uw3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QuM-L5-ida"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QuM-L5-ida" firstAttribute="trailing" secondItem="Kqp-QI-Frn" secondAttribute="trailing" id="Z6Z-8d-XNb"/>
+                            <constraint firstItem="Kqp-QI-Frn" firstAttribute="leading" secondItem="QuM-L5-ida" secondAttribute="leading" id="g57-kr-BbQ"/>
+                            <constraint firstItem="Kqp-QI-Frn" firstAttribute="top" secondItem="QuM-L5-ida" secondAttribute="top" id="lcq-F6-25c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Spell The Answer" id="D91-b3-iIf">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="vlb-1C-and">
+                            <connections>
+                                <action selector="doneButton:" destination="jUT-ZF-lgR" id="RfJ-BC-Fww"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="englishLabel" destination="Ryd-II-Po6" id="k91-yW-p6f"/>
+                        <outlet property="greekTextField" destination="nGd-Uu-DZb" id="Qr2-Fa-0Ww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sin-Bp-o4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="1180"/>
+        </scene>
+        <!--Solve The Anagram-->
+        <scene sceneID="NuI-Tf-4op">
+            <objects>
+                <viewController id="ga3-fL-xwO" customClass="AnagramTestVC" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xi1-FD-Va1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Kc-xqv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXP-5v-GzT">
+                                        <rect key="frame" x="164" y="0.0" width="86.5" height="53.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-97-tbx">
+                                        <rect key="frame" x="163" y="133.5" width="88" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvi-1D-tpw">
+                                        <rect key="frame" x="166.5" y="266.5" width="81" height="53.5"/>
+                                        <state key="normal" title="Instructions"/>
+                                        <connections>
+                                            <action selector="instructions:" destination="ga3-fL-xwO" eventType="touchUpInside" id="ndE-Vk-F7i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Asl-Uu-YOl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ddN-Lz-mho"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gOm-Kc-xqv" firstAttribute="leading" secondItem="ddN-Lz-mho" secondAttribute="leading" id="0SX-0F-sOg"/>
+                            <constraint firstItem="gOm-Kc-xqv" firstAttribute="top" secondItem="ddN-Lz-mho" secondAttribute="top" id="GKM-A1-PxX"/>
+                            <constraint firstItem="ddN-Lz-mho" firstAttribute="trailing" secondItem="gOm-Kc-xqv" secondAttribute="trailing" id="rIb-Si-IkZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Solve The Anagram" id="i3M-fU-KQY">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="MeH-Qc-KJX">
+                            <connections>
+                                <action selector="doneButton:" destination="ga3-fL-xwO" id="ASR-XL-0az"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="anagramLabel" destination="pXP-5v-GzT" id="TFb-3i-Os8"/>
+                        <outlet property="translationTextField" destination="h4v-97-tbx" id="J2i-RQ-vWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAT-4N-BHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3361" y="589"/>
+        </scene>
+        <!--Identifying Test-->
+        <scene sceneID="04d-AQ-Oh1">
+            <objects>
+                <tableViewController id="bVg-tJ-HeO" customClass="IDTestTableVC" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s5J-at-0Gw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questionWord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="558-3E-gsM">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mL7-b7-YQs">
+                            <rect key="frame" x="0.0" y="138" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Instructions"/>
+                            <connections>
+                                <action selector="instruction:" destination="bVg-tJ-HeO" eventType="touchUpInside" id="cBk-Vb-OiY"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RandomCell" textLabel="Ir4-fz-3dp" rowHeight="38" style="IBUITableViewCellStyleDefault" id="MEf-vH-H4a" customClass="RandomCell" customModule="Greek_Vocabulary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MEf-vH-H4a" id="qfd-cJ-BXu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ir4-fz-3dp">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="38"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="randomWordLabel" destination="Ir4-fz-3dp" id="mRj-3m-rwF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bVg-tJ-HeO" id="vFM-iU-lIj"/>
+                            <outlet property="delegate" destination="bVg-tJ-HeO" id="0ug-5E-t3x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Identifying Test" id="nJJ-iO-Tic">
+                        <barButtonItem key="rightBarButtonItem" title="Select" style="done" id="Q7X-Oa-zVg">
+                            <connections>
+                                <action selector="trySelected:" destination="bVg-tJ-HeO" id="RHQ-HO-F28"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="questionWord" destination="558-3E-gsM" id="GqE-dX-roo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKa-Za-UHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="37"/>
+        </scene>
+        <!--Add New Word-->
+        <scene sceneID="Cia-qA-DuU">
+            <objects>
+                <viewController id="5hC-YU-HKH" customClass="AddNewVC" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5k-Ei-oab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-bz-s7W">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type the word in English on the left and then the Greek translation on the right." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-Ol-dCu">
+                                        <rect key="frame" x="21.5" y="0.0" width="371.5" height="29.5"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-TT-grv">
+                                        <rect key="frame" x="57" y="49.5" width="300" height="50.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="English" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="aiv-rA-bjq">
+                                                <rect key="frame" x="0.0" y="11" width="75" height="28.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Greek" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-mL-KH1">
+                                                <rect key="frame" x="225" y="11" width="75" height="28.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6H6-5h-WGJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2HA-Ml-N8j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e4E-bz-s7W" firstAttribute="top" secondItem="2HA-Ml-N8j" secondAttribute="top" id="Jx7-hA-KGb"/>
+                            <constraint firstAttribute="trailing" secondItem="e4E-bz-s7W" secondAttribute="trailing" id="QmR-OX-Vmf"/>
+                            <constraint firstItem="e4E-bz-s7W" firstAttribute="leading" secondItem="2HA-Ml-N8j" secondAttribute="leading" id="ydh-nS-Ugt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Word" id="Lzd-Yd-ORQ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="sW6-af-apc">
+                            <connections>
+                                <action selector="addNew:" destination="5hC-YU-HKH" id="dPE-rg-t9b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="englishWord" destination="aiv-rA-bjq" id="NRB-rf-05c"/>
+                        <outlet property="greekWord" destination="kgC-mL-KH1" id="Z7N-Hq-njw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tc4-8n-RrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="-625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kBF-LT-EUj">
+            <objects>
+                <navigationController id="jVT-FZ-dpC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQe-xs-c32">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="McP-Jh-aD2" kind="relationship" relationship="rootViewController" id="183-6h-Cgt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiG-xH-HY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="37"/>
+        </scene>
+        <!--Vocabulary List-->
+        <scene sceneID="rq3-yO-OFN">
+            <objects>
+                <tableViewController id="MLN-Ai-5Sj" customClass="WordListTableViewController" customModule="Greek_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ao9-ri-2cN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" id="xIz-Vo-4N6">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-O8-gUi">
+                                    <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Greek" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-nA-L3C">
+                                    <rect key="frame" x="356.5" y="0.0" width="57.5" height="44"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" textLabel="UeH-ny-B5g" detailTextLabel="eDM-cT-qqV" style="IBUITableViewCellStyleValue1" id="is2-Lj-DcW" customClass="WordCell" customModule="Greek_Vocabulary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="is2-Lj-DcW" id="SXm-Ii-ptG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="originalWord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UeH-ny-B5g">
+                                            <rect key="frame" x="20" y="12" width="96.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="translatedWord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eDM-cT-qqV">
+                                            <rect key="frame" x="276.5" y="12" width="117.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="originalWord" destination="UeH-ny-B5g" id="vVb-OW-qaU"/>
+                                    <outlet property="translatedWord" destination="eDM-cT-qqV" id="M2K-Ah-X5A"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="MLN-Ai-5Sj" id="ky6-Tq-ckX"/>
+                            <outlet property="delegate" destination="MLN-Ai-5Sj" id="EdS-xe-QjN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Vocabulary List" id="ZYy-QF-GNi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0E-Fo-ful" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="-229"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
